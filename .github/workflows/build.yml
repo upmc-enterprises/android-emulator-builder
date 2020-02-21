@@ -1,0 +1,13 @@
+name: Build Emulator
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Clone Repository
+      uses: actions/checkout@v1
+      
+    - name: Build App
+      run: ./setup-all.sh
