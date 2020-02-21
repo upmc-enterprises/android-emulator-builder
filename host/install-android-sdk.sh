@@ -9,6 +9,6 @@ touch "$HOME/.android/repositories.cfg"
 
 # Install the SDKs
 yes | sdkmanager --update && true
-sdkmanager "platform-tools" "platforms;android-$androidSdkVersion" >> /dev/null
+sdkmanager "platform-tools" "platforms;android-$androidSdkVersion"
 echo "Installed SDKs"
 yes | sdkmanager --licenses && true
