@@ -12,8 +12,8 @@ else
     imageName="system-images;android-$androidSdkVersion;google_apis;x86"
 fi
 
-(while sleep 1; do echo y; done) | sdkmanager $imageName
-(while sleep 1; do echo y; done) | sdkmanager --licenses || { status=$?; echo "Done"; }
+(while sleep 1; do echo y; done) | sdkmanager $imageName > /dev/null || { status=$?; echo "Done"; }
+(while sleep 1; do echo y; done) | sdkmanager --licenses > /dev/null || { status=$?; echo "Done"; }
 
 # Create the AVD
 avdmanager create avd \
