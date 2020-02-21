@@ -9,5 +9,8 @@ jobs:
     - name: Clone Repository
       uses: actions/checkout@v1
       
-    - name: Build App
-      run: ./setup-all.sh
+    - name: Prepare the Host
+      run: ./setup-host.sh
+    
+    - name: Prepare the Emulator
+      run: ./setup-emulator.sh
