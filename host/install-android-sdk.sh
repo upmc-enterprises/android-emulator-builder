@@ -11,4 +11,4 @@ touch "$HOME/.android/repositories.cfg"
 yes | sdkmanager --update
 sdkmanager "platform-tools" "platforms;android-$androidSdkVersion" >> /dev/null
 echo "Installed SDKs"
-yes 2>/dev/null | sdkmanager --licenses || { status=$?; echo "Done"; }
+yes | sdkmanager --licenses
