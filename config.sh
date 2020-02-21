@@ -33,6 +33,11 @@ deviceProfile="pixel_xl"
 # for later when you need to start it up for testing.
 emulatorDeviceName="Device"
 
+# Configures the host platform. Valid values are either "mac"
+# or "linux".
+#hostType="linux"
+hostType="mac"
+
 # Whether or not to include the Google Play store when setting
 # up the emulator. All x86 images down to API 24 and x86_64
 # images down to API 28 can support the Google Play Store.
@@ -51,8 +56,13 @@ installDestination="$HOME/android"
 
 # Regex used to locate the Android Command Line Tools on the
 # Android Studio download page.
-commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-darwin\-[0-9]*\.zip" # Mac
-# commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-linux\-[0-9]*\.zip" # Linux
+commandLineToolsDownloadUrlPattern=""
+
+if [[ "$hostType" == "mac" ]]; then 
+  commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-darwin\-[0-9]*\.zip"
+else
+  commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-linux\-[0-9]*\.zip"
+fi
 
 # Regex used to locate the latest version of JDK 8 available
 # from SDKMan. More info on versions here: https://bit.ly/2SCGEnb
