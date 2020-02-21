@@ -8,5 +8,5 @@ mkdir -p "$HOME/.android"
 touch "$HOME/.android/repositories.cfg"
 
 # Install the SDKs
-sdkmanager "platform-tools" "platforms;android-$androidSdkVersion"
-(while sleep 1; do echo y; done) | sdkmanager --licenses || { status=$?; echo "Done"; }
+(while sleep 1; do echo y 2>/dev/null; done) | sdkmanager "platform-tools" "platforms;android-$androidSdkVersion"
+(while sleep 1; do echo y 2>/dev/null; done) | sdkmanager --licenses || { status=$?; echo "Done"; }
