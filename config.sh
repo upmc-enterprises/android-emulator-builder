@@ -48,6 +48,10 @@ includePlayStore=false
 # requested SDKs. Also sets $ANDROID_HOME.
 installDestination="$HOME/android"
 
+# How long to wait, in seconds, before timing out and assuming
+# that the emulator will not start.
+startEmulatorTimeout=120
+
 ############################################################################################
 
 ##########################################
