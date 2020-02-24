@@ -14,5 +14,5 @@ jobs:
     
     - name: Prepare the Emulator
       run: |
-        export $PATH=""
+        export PATH=""
         ./setup-emulator.sh
