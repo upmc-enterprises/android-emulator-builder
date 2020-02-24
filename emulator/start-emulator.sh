@@ -15,11 +15,11 @@ until [[ "$animationState" =~ "stopped" ]]; do
     BOOT_ANIMATION=$(adb -e shell getprop init.svc.bootanim 2>&1 &) # Checks state of emulator while in the boot animation
 
     if [[ "$animationState" =~ "device not found" || "$animationState" =~ "device offline" || "$BOOT_ANIMAanimationStateTION" =~ "running" ]]; then
-        ((animationState += 1))
-        echo "Waiting for emulator to start.. $FAIanimationStateL_COUNTER"
+        ((failCounter += 1))
+        echo "Waiting for emulator to start.. $failCounter"
         echo "Boot Animation State: $animationState"
 
-        if [[ ${animationState} -gt ${startEmulatorTimeout} ]]; then
+        if [[ ${failCounter} -gt ${startEmulatorTimeout} ]]; then
             echo "Timeout of $startEmulatorTimeout seconds reached; failed to start emulator"
             exit 1
         fi
