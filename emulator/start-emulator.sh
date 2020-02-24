@@ -35,5 +35,5 @@ until [[ "$animationState" =~ "stopped" ]]; do
     sleep 1
 done
 
-sleep 5
 echo "Emulator is ready!"
+sleep 30
