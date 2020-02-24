@@ -5,4 +5,4 @@ source "$currentDir/../config.sh"
 
 # Start the emulator and wait for the boot to finish
 $installDestination/emulator/emulator -avd "$emulatorDeviceName" -no-audio -wipe-data &
-adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
+while [ "`adb shell getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done
