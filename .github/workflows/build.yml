@@ -13,4 +13,6 @@ jobs:
       run: ./setup-host.sh
     
     - name: Prepare the Emulator
-      run: ./setup-emulator.sh
+      run: |
+        ./setup-emulator.sh
+        adb emu kill

@@ -8,7 +8,7 @@ hasSoftKeyboard=$(adb shell 'pm list packages' | grep -o 'com\.example\.android\
 
 # Install it, if it is missing
 if [[ "$hasSoftKeyboard" == "" ]]; then
-  adb install -t app-debug.apk
+  adb install -t  "$currentDir/../bin/softkeyboard-debug.apk"
 fi
 
 # Switch to the new keyboard
