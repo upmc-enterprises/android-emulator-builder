@@ -12,4 +12,5 @@ if [[ "$hasSoftKeyboard" == "" ]]; then
 fi
 
 # Switch to the new keyboard
+sleep 5 # Give device time to settle
 adb shell 'ime set com.example.android.softkeyboard/.SoftKeyboard'
