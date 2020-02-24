@@ -1,10 +1,14 @@
-
+#!/bin/bash
 
 currentDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 source "$currentDir/../config.sh"
 
+echo
+echo "==========================="
 echo "Fixing GBoard"
 echo "==========================="
+echo 
+
 
 # Check to see if the emulator already has the Soft Keyboard
 hasSoftKeyboard=$(adb shell 'pm list packages' | grep -o 'com\.example\.android\.softkeyboard')

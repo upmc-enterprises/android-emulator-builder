@@ -3,8 +3,15 @@
 currentDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 source "$currentDir/../config.sh"
 
+echo
+echo "==========================="
+echo "Starting the Emulator"
+echo "==========================="
+echo 
+
 # Start the emulator
 $installDestination/emulator/emulator -avd "$emulatorDeviceName" -no-audio -wipe-data &
+echo "Start command sent..."
 
 # Wait for the boot to finish
 # Thanks: https://gist.github.com/mrk-han/db70c7ce2dfdc8ac3e8ae4bec823ba51
@@ -28,4 +35,5 @@ until [[ "$animationState" =~ "stopped" ]]; do
     sleep 1
 done
 
+sleep 5
 echo "Emulator is ready!"
