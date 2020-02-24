@@ -48,10 +48,6 @@ includePlayStore=false
 # requested SDKs. Also sets $ANDROID_HOME.
 installDestination="$HOME/android"
 
-# How long to wait, in seconds, before timing out and assuming
-# that the emulator will not start.
-startEmulatorTimeout=120
-
 ############################################################################################
 
 ##########################################
@@ -71,3 +67,7 @@ fi
 # Regex used to locate the latest version of JDK 8 available
 # from SDKMan. More info on versions here: https://bit.ly/2SCGEnb
 jdkPattern="8\.0\.[0-9][0-9][0-9]\.hs\-adpt"
+
+# How long to wait, in seconds, before timing out and assuming
+# that the emulator will not start.
+startEmulatorTimeout=180

@@ -26,6 +26,7 @@ echo "Created!"
 
 echo "Accepting any remaining licenses"
 (for run in {1..30}; do sleep 3; echo y 2>/dev/null; done) | sdkmanager --licenses
+echo "All licenses accepted"
 
 # Create the AVD
 echo "Creating AVD: $emulatorDeviceName"
