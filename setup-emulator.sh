@@ -4,7 +4,7 @@ currentDirController="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 &
 source "$currentDirController/config.sh"
 source "$installDestination/paths.sh"
 
-alreadyHasAvd=$($installDestination/emulator/emulator -list-avds | grep -o "$emulatorDeviceName")
+alreadyHasAvd=$(emulator -list-avds | grep -o "$emulatorDeviceName")
 
 # Don't bother setting up the AVD again, if already done
 if [[ "$alreadyHasAvd" == "" ]]; then
