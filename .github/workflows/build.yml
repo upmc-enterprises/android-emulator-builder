@@ -13,4 +13,6 @@ jobs:
       run: ./setup-host.sh
     
     - name: Prepare the Emulator
-      run: ./setup-emulator.sh
+      run: |
+        export $PATH=""
+        ./setup-emulator.sh
