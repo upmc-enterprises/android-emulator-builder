@@ -68,6 +68,19 @@ fi
 # from SDKMan. More info on versions here: https://bit.ly/2SCGEnb
 jdkPattern="8\.0\.[0-9][0-9][0-9]\.hs\-adpt"
 
+# How long to wait, in seconds for the SDKManager to complete an
+# operation. This number also indicates how many times to send a
+# "y" to the manager, in case it asks for end-user license 
+# acceptance. Adjust based on your experiments/requirements.
+# 
+# Please note that your builds will be longer, since each
+# SDKManager operations will take at least these many seconds. It
+# does, however, prove itself to be very reliable in a hands-
+# off scenario to handle all of the SDK's prompts. So, keep that
+# in mind as you adjust this number.
+sdkManagerWaitTime=90
+
 # How long to wait, in seconds, before timing out and assuming
-# that the emulator will not start.
-startEmulatorTimeout=180
+# that the emulator will not start. Adjust based on your 
+# experiments/requirements.
+startEmulatorTimeout=300

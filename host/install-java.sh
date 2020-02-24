@@ -19,4 +19,4 @@ echo "Finished installing SDKMan"
 jdkVersion=$(sdk list java | grep -o "$jdkPattern")
 echo "Installing JDK"
 sdk install java $jdkVersion
-echo "Finished istalling SDKMan"
+echo "Finished installing JDK"
