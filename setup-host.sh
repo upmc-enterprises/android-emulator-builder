@@ -8,3 +8,9 @@ source "$currentDirController/host/install-java.sh"
 source "$currentDirController/host/create-paths.sh"
 source "$currentDirController/host/install-paths.sh"
 source "$currentDirController/host/install-android-sdk.sh"
+
+echo 
+echo "*******************************************************"
+echo "************ Finished setting up the host! ************"
+echo "*******************************************************"
+echo 

@@ -16,3 +16,9 @@ source "$currentDirController/emulator/fix-gboard.sh"
 source "$currentDirController/emulator/fix-google-chrome.sh"
 source "$currentDirController/emulator/fix-google-maps.sh"
 source "$currentDirController/emulator/fix-webview-shell.sh"
+
+echo 
+echo "*******************************************************"
+echo "******** Finished setting up Android emulator! ********"
+echo "*******************************************************"
+echo 

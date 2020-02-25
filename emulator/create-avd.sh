@@ -22,7 +22,7 @@ fi
 
 echo "Obtaining image: $imageName"
 (for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager $imageName >> /dev/null
-echo "Created!"
+echo "Obtained"
 
 echo "Accepting any remaining licenses"
 (for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager --licenses
@@ -33,9 +33,9 @@ echo "Creating AVD: $emulatorDeviceName"
 
 avdmanager create avd \
   --abi google_apis/x86 \
-  --device $deviceProfile \
+  --device "$deviceProfile" \
   --force \
-  --name $emulatorDeviceName \
+  --name "$emulatorDeviceName" \
   --package $imageName
 
-echo "AVD create"
+echo "AVD created"
