@@ -65,6 +65,13 @@ else
   commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-linux\-[0-9]*\.zip"
 fi
 
+# After the emulator indicates that it has booted, it may take a
+# bit more time before the launcher shows and the device is ready
+# for interaction. This number configures how many seconds to wait
+# after the device indicates that it is ready before proceeding to
+# interact with it.
+emulatorBootedSleepTime=30
+
 # Regex used to locate the latest version of JDK 8 available
 # from SDKMan. More info on versions here: https://bit.ly/2SCGEnb
 jdkPattern="8\.0\.[0-9][0-9][0-9]\.hs\-adpt"
