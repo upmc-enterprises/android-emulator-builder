@@ -41,7 +41,8 @@ hostType="mac"
 # Whether or not to include the Google Play store when setting
 # up the emulator. All x86 images down to API 24 and x86_64
 # images down to API 28 can support the Google Play Store.
-# See more information by runing: sdkmanager --list
+# Please note that this framework assumes you are building x86
+# emulators. See more information by runing: sdkmanager --list
 includePlayStore=false
 
 # Location to install the Android Command Line tools, and all
