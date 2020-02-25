@@ -35,5 +35,6 @@ until [[ "$animationState" =~ "stopped" ]]; do
     sleep 1
 done
 
+echo "Waiting for launcher to show..."
+sleep $emulatorBootedSleepTime
 echo "Emulator is ready!"
-sleep 30
