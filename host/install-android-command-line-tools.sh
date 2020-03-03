@@ -19,7 +19,7 @@ unzip -q android.zip -d ./android-temp
 echo "Extraction complete"
 
 mkdir -p "$installDestination/cmdline-tools/latest"
-mv ./android-temp/* "$installDestination/cmdline-tools/latest"
+mv ./android-temp/tools/* "$installDestination/cmdline-tools/latest"
 rm -rf ./android-temp
 rm android.zip
 
