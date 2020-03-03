@@ -17,7 +17,7 @@ source "$installDestination/paths.sh"
 touch $HOME/.bash_profile
 echo "" >> $HOME/.bash_profile
 echo "# Android development environment modifications" >> $HOME/.bash_profile
-echo "source $installDestination/path.sh" >> $HOME/.bash_profile
+echo "source $installDestination/paths.sh" >> $HOME/.bash_profile
 echo "Installed into the Bash shell"
 
 # Install to Zsh
