@@ -9,15 +9,6 @@ echo "Install Android Command Line Tools"
 echo "==========================="
 echo 
 
-which sdkmanager
-cat "$HOME/.bash_profile"
-cat "$HOME/.zshrc"
-cat "$HOME/android/paths.sh"
-ls "$HOME/android"
-ls "$HOME/android/cmdline-tools"
-ls "$HOME/android/cmdline-tools/latest"
-ls "$HOME/android/cmdline-tools/latest/bin"
-
 # Prerequisites
 mkdir -p "$HOME/.android"
 touch "$HOME/.android/repositories.cfg"
