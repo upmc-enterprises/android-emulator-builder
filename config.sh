@@ -60,9 +60,9 @@ installDestination="$HOME/android"
 commandLineToolsDownloadUrlPattern=""
 
 if [[ "$hostType" == "mac" ]]; then 
-  commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-darwin\-[0-9]*\.zip"
+  commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/commandlinetools\-mac\-[0-9]*_latest\.zip"
 else
-  commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/sdk\-tools\-linux\-[0-9]*\.zip"
+  commandLineToolsDownloadUrlPattern="https:\/\/dl.google.com\/android\/repository\/commandlinetools\-linux\-[0-9]*_latest\.zip"
 fi
 
 # After the emulator indicates that it has booted, it may take a

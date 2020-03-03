@@ -12,15 +12,15 @@ echo
 # Download and extract the contents
 toolsDownloadUrl=$(curl https://developer.android.com/studio | grep -o "$commandLineToolsDownloadUrlPattern")
 echo "Downloading ZIP package"
-curl -o android.zip $toolsDownloadUrl
+curl --location -o android.zip $toolsDownloadUrl
 echo "Download complete"
 echo "Extacting ZIP package"
-unzip -q android.zip -d ./android-unzip-temp
+unzip -q android.zip -d ./android-temp
 echo "Extraction complete"
 
-mkdir -p $installDestination
-mv ./android-unzip-temp/* $installDestination
-rm -rf ./android-unzip-temp
+mkdir -p "$installDestination/cmdline-tools/latest"
+mv ./android-temp/* "$installDestination/cmdline-tools/latest"
+rm -rf ./android-temp
 rm android.zip
 
-echo "Moved contents to $installDestination"
+echo "Moved contents to $installDestination/cmdline-tools/latest"
