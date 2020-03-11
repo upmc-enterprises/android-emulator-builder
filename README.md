@@ -33,7 +33,6 @@ The `config.sh` file is the central point for configuring the behavior of the pi
 | `commandLineToolsDownloadUrlPattern` | Regex pattern used to extract the latest Command Line Tools from the Android Studio download page. | String | :x: |
 | `emulatorBootedSleepTime` | How long to wait, in seconds, after the emulator's boot has finished to ensure the launcher is visible and ready for user interaction. | Integer | :x: |
 | `jdkPattern` | Regex pattern used to identify the latest JDK 8 build available from SDKMan. | String | :x: |
-| `sdkManagerWaitTime` | How long to wait, in seconds, as commands to the `sdkmanager` are made. Useful for automatically accepting any licenses without hanging the process. | Integer | :x: |
 | `startEmulatorTimeout` | How long to wait, in seconds, before assuming the Android Emulator will not or did not properly start. | Integer | :x: |
 
 Feel free to open the `setup-emulator.sh` and `setup-host.sh` files to see each of the steps which run, and enable or disable them according to your needs.

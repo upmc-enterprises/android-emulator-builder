@@ -20,13 +20,17 @@ else
     imageName="system-images;android-$androidSdkVersion;google_apis;x86"
 fi
 
+(for run in {1..1000}; do echo y; done) >> yep.txt
+
 echo "Obtaining image: $imageName"
-(for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager $imageName >> /dev/null
+cat ./yep.txt | sdkmanager $imageName >> /dev/null
 echo "Obtained"
 
 echo "Accepting any remaining licenses"
-(for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager --licenses
+cat ./yep.txt | sdkmanager --licenses
 echo "All licenses accepted"
+
+rm ./yep.txt
 
 # Create the AVD
 echo "Creating AVD: $emulatorDeviceName"
