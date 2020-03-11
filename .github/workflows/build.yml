@@ -16,3 +16,11 @@ jobs:
       run: |
         ./setup-emulator.sh
         adb emu kill
+
+    - name: Build an Example Project
+      run: |
+        source $HOME/android/paths.sh
+        git clone https://github.com/upmc-enterprises/softkeyboard.git
+        cd softkeyboard/
+        ./gradlew build
+        
