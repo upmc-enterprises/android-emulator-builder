@@ -14,14 +14,18 @@ mkdir -p "$HOME/.android"
 touch "$HOME/.android/repositories.cfg"
 
 # Install the SDKs
+(for run in {1..1000}; do echo y; done) >> yep.txt
+
 echo "SDKManager license"
-(for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager --update
+cat ./yep.txt | sdkmanager --update
 echo "License accepted"
 
 echo "Obtaining the platform tools and API $androidSdkVersion tools"
-(for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager "platform-tools" "platforms;android-$androidSdkVersion" >> /dev/null
+cat ./yep.txt | sdkmanager "platform-tools" "platforms;android-$androidSdkVersion" >> /dev/null
 echo "Finished obtaining tools"
 
 echo "Accepting any remaining licenses"
-(for run in {1..$sdkManagerWaitTime}; do sleep 1; echo y 2>/dev/null; done) | sdkmanager --licenses || { status=$?; echo "Done"; }
+cat ./yep.txt | sdkmanager --licenses
 echo "All licenses accepted"
+
+rm ./yep.txt
