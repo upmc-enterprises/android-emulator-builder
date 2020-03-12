@@ -5,7 +5,7 @@
 "Ideal for CI setup, automated testing, OS image creation, and other hands-off scenarios."
 ```
 
-[![Build Emulator Status](https://github.com/upmc-enterprises/android-emulator-builder/workflows/Build%20Emulator/badge.svg)](https://github.com/upmc-enterprises/android-emulator-builder/actions) ![Platform Support](https://img.shields.io/badge/Platform-macos%20%7C%20linux-green) ![Shell Support](https://img.shields.io/badge/Shell-bash%20%7C%20zsh-green) [![Latest Release](https://img.shields.io/github/v/release/upmc-enterprises/android-emulator-builder?label=Release)](https://github.com/upmc-enterprises/android-emulator-builder/releases)
+[![Build Emulator Status](https://github.com/upmc-enterprises/android-emulator-builder/workflows/Build%20Emulator/badge.svg)](https://github.com/upmc-enterprises/android-emulator-builder/actions) ![Platform Support](https://img.shields.io/badge/Platform-macOS%20%7C%20linux-green) ![Shell Support](https://img.shields.io/badge/Shell-bash%20%7C%20zsh-green) [![Latest Release](https://img.shields.io/github/v/release/upmc-enterprises/android-emulator-builder?label=Release)](https://github.com/upmc-enterprises/android-emulator-builder/releases)
 
 <hr />
 </div>
