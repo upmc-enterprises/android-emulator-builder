@@ -5,7 +5,7 @@ source "$currentDir/../config.sh"
 
 echo
 echo "==========================="
-echo "Install Android Command Line Tools"
+echo "Install Android SDK and Platform Tools"
 echo "==========================="
 echo 
 
