@@ -14,10 +14,10 @@ imageName=""
 
 if ( $includePlayStore ); then
     echo "Including the Google Play Store in the AVD"
-    imageName="system-images;android-$androidSdkVersion;google_apis_playstore;x86"
+    imageName="system-images;android-$androidSdkVersion;google_apis_playstore;$hostArchitecture"
 else
     echo "Not including the Google Play Store in the AVD"
-    imageName="system-images;android-$androidSdkVersion;google_apis;x86"
+    imageName="system-images;android-$androidSdkVersion;google_apis;$hostArchitecture"
 fi
 
 (for run in {1..1000}; do echo y; done) >> yep.txt
@@ -36,7 +36,7 @@ rm ./yep.txt
 echo "Creating AVD: $emulatorDeviceName"
 
 avdmanager create avd \
-  --abi google_apis/x86 \
+  --abi "google_apis/$hostArchitecture" \
   --device "$deviceProfile" \
   --force \
   --name "$emulatorDeviceName" \

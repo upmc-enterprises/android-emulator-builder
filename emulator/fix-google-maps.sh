@@ -12,7 +12,7 @@ echo
 
 # Open Google Maps and dismiss the on-boarding prompt
 echo "Opening Google Maps"
-adb shell 'monkey -p com.google.android.apps.maps -c android.intent.category.LAUNCHER 1'
+adb shell 'am start com.google.android.apps.maps'
 sleep 5
 
 echo "Dismissing the On-Boarding prompt"
